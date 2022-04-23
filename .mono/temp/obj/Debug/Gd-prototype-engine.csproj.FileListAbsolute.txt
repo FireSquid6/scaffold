@@ -1,0 +1,9 @@
+D:\Projects\gd-prototype-engine\.mono\temp\bin\Debug\Gd-prototype-engine.dll
+D:\Projects\gd-prototype-engine\.mono\temp\bin\Debug\Gd-prototype-engine.pdb
+D:\Projects\gd-prototype-engine\.mono\temp\obj\Debug\Gd-prototype-engine.csproj.AssemblyReference.cache
+D:\Projects\gd-prototype-engine\.mono\temp\obj\Debug\Gd-prototype-engine.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\gd-prototype-engine\.mono\temp\obj\Debug\Gd-prototype-engine.AssemblyInfoInputs.cache
+D:\Projects\gd-prototype-engine\.mono\temp\obj\Debug\Gd-prototype-engine.AssemblyInfo.cs
+D:\Projects\gd-prototype-engine\.mono\temp\obj\Debug\Gd-prototype-engine.csproj.CoreCompileInputs.cache
+D:\Projects\gd-prototype-engine\.mono\temp\obj\Debug\Gd-prototype-engine.dll
+D:\Projects\gd-prototype-engine\.mono\temp\obj\Debug\Gd-prototype-engine.pdb
