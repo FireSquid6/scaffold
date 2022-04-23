@@ -20,8 +20,13 @@ func _exit(_args := []) -> void:
 	pass
 
 
-# runs whenever this state is updated
-func _update() -> void:
+# execute game logic here
+func _game_logic() -> void:
+	pass
+
+
+# run logic for transferring to other states here
+func _transfer_logic(existing_states):
 	pass
 
 
@@ -30,6 +35,6 @@ func _can_change() -> bool:
 	return true
 
 
-# a virtual method for getting inputs. This function is called by the state machine before the update function
-func _get_inputs() -> void:
+# same as _input(), but only called when active
+func _active_input(event: InputEvent) -> void:
 	pass
