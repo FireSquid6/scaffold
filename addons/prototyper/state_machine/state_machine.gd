@@ -17,12 +17,12 @@ signal transfer_logic_finished() # emitted whenever state finishes running its t
 
 
 func _ready():
-	# start initial state
-	change_state(starting_state)
-
 	# get all possible states
 	for child in get_children():
 		possible_states.append(child.get_name())
+
+	# start initial state
+	change_state(starting_state)
 
 
 # changes the state to new_state. The enter_args array will be passed into the new state's _enter() function, while the exit_args array will be passed into the old state's _exit() function
@@ -33,36 +33,38 @@ func change_state(new_state: String, enter_args := [], exit_args := []) -> bool:
 	var new_name = "none"
 
 	# have the old state exit
-	if selected_state != null and (new_state in possible_states):
-		# run exit function
-		selected_state._exit(exit_args)
-		
-		# edit state history
-		state_history.insert(0, selected_state.name)
-		if len(state_history) > max_state_history_length:
-			state_history.remove(20)
+	if (new_state in possible_states):
+		if selected_state != null:
+			# run exit function
+			selected_state._exit(exit_args)
+			
+			# edit state history
+			state_history.insert(0, selected_state.name)
+			if len(state_history) > max_state_history_length:
+				state_history.remove(20)
 
-		# debug stuff
-		old_name = selected_state.name
+			# debug stuff
+			old_name = selected_state.name
+	
+		# enter into the new state
+		selected_state = get_state(new_state)
+		selected_state._enter(enter_args)
+		new_name = selected_state.name
+
+		# output debug
+		if output_changes:
+			print("Switched from " + old_name + " to " + new_name)
+		
+		# emit signal
+		emit_signal("state_changed", old_name, new_name)
+
+		# return success
+		return true
 	else:
 		if output_changes:
 			print("State change failed")
+		
 		return false
-	
-	# enter into the new state
-	selected_state = get_state(selected_state)
-	selected_state._enter(enter_args)
-	new_name = selected_state.name
-
-	# output debug
-	if output_changes:
-		print("Switched from " + old_name + " to " + new_name)
-	
-	# emit signal
-	emit_signal("state_changed", old_name, new_name)
-
-	# return success
-	return true
 
 
 # tells the state machine to process all of the states
