@@ -15,8 +15,13 @@ signal state_changed(old_state, new_state) # emitted whenever a state is changed
 signal game_logic_finished() # emitted whenever the state finishes running its game_logic function
 signal transfer_logic_finished() # emitted whenever state finishes running its transfer logic
 
+var parent # a reference to the state machine's parent
+
 
 func _ready():
+	# get parent
+	parent = get_parent()
+
 	# get all possible states
 	for child in get_children():
 		possible_states.append(child.get_name())
