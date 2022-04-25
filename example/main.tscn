@@ -7,7 +7,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="ShooterMan" parent="." instance=ExtResource( 1 )]
-position = Vector2( 501, 255 )
+position = Vector2( 448, 320 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

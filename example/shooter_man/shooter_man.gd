@@ -21,6 +21,9 @@ func _physics_process(_delta):
 	# update states
 	state_machine.process_states()
 
+	# update label
+	$Label.text = state_machine.selected_state.name
+
 
 func shoot():
 	pass

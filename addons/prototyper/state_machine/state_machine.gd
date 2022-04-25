@@ -77,7 +77,7 @@ func change_state(new_state: String, enter_args := [], exit_args := []) -> bool:
 func process_states():
 	selected_state._game_logic()
 	emit_signal("game_logic_finished")
-	selected_state._transfer_logic(possible_states)
+	selected_state._transition_logic(possible_states)
 	emit_signal("transfer_logic_finished")
 
 
@@ -94,4 +94,5 @@ func get_state(state_name):
 
 
 func _input(event):
-	selected_state._active_input(event)
+	if selected_state != null:
+		selected_state._active_input(event)
