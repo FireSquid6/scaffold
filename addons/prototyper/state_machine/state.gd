@@ -11,12 +11,12 @@ var dash = false
 
 
 # runs whenever this state is entered
-func _enter(_args := []) -> void:
+func _enter(args := []) -> void:
 	pass
 
 
 # runs whenever this state is exited
-func _exit(_args := []) -> void:
+func _exit(args := []) -> void:
 	pass
 
 
@@ -25,8 +25,8 @@ func _game_logic() -> void:
 	pass
 
 
-# run logic for transferring to other states here
-func _transfer_logic(existing_states):
+# run logic for transitioning to other states here
+func _transition_logic(existing_states: Array):
 	pass
 
 

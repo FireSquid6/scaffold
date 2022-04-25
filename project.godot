@@ -10,12 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "KinematicBody2D",
+"class": "Bullet",
+"language": "GDScript",
+"path": "res://example/shooter_man/bullet.gd"
+}, {
+"base": "KinematicBody2D",
 "class": "PlatformController2D",
 "language": "GDScript",
 "path": "res://addons/prototyper/controllers/platform_controller.gd"
 }, {
 "base": "KinematicBody2D",
-"class": "ShooterPlayer",
+"class": "ShooterEnemy",
 "language": "GDScript",
 "path": "res://example/shooter_man/shooter_man.gd"
 }, {
@@ -30,8 +35,9 @@ _global_script_classes=[ {
 "path": "res://addons/prototyper/state_machine/state_machine.gd"
 } ]
 _global_script_class_icons={
+"Bullet": "",
 "PlatformController2D": "",
-"ShooterPlayer": "",
+"ShooterEnemy": "",
 "State": "",
 "StateMachine": ""
 }
