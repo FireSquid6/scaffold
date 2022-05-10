@@ -1,4 +1,4 @@
-extends Area2D
+extends KinematicBody2D
 class_name Bullet
 
 
@@ -10,4 +10,4 @@ func _ready():
 	print("bullet created")
 
 func _physics_process(delta):
-	position += direction * spd * delta
+	move_and_slide(direction * spd)

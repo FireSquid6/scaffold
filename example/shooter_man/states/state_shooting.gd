@@ -17,7 +17,7 @@ func _on_WeaponCooldown_timeout():
 	# set the bullet's direction and position
 	var other_pos = shooter.target.position
 	var dir = (other_pos - shooter.position).normalized()
-	bullet.direction = dir
+	# bullet.direction = dir
 	bullet.position = shooter.position
 
 	# add the bullet to the scene
