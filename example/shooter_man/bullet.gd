@@ -6,8 +6,6 @@ var direction = Vector2.UP
 export var spd = 800
 
 
-func _ready():
-	print("bullet created")
-
-func _physics_process(delta):
-	move_and_slide(direction * spd)
+func _physics_process(_delta):
+	rotation = direction.angle() + deg2rad(90)
+	var _new_vel = move_and_slide(direction * spd)

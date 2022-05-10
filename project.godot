@@ -33,19 +33,25 @@ _global_script_classes=[ {
 "class": "StateMachine",
 "language": "GDScript",
 "path": "res://addons/prototyper/state_machine/state_machine.gd"
+}, {
+"base": "Node2D",
+"class": "Weapon",
+"language": "GDScript",
+"path": "res://addons/prototyper/weapon_factory/weapon.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
 "PlatformController2D": "",
 "ShooterEnemy": "",
 "State": "",
-"StateMachine": ""
+"StateMachine": "",
+"Weapon": ""
 }
 
 [application]
 
 config/name="Gd-prototype-engine"
-run/main_scene="res://example/main.tscn"
+run/main_scene="res://example/shooter_man/state_demo.tscn"
 config/icon="res://icon.png"
 
 [editor_plugins]

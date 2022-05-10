@@ -1,17 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://example/shooter_man/shooter_man.tscn" type="PackedScene" id=1]
-[ext_resource path="res://addons/prototyper/cheat_console/console.tscn" type="PackedScene" id=2]
 [ext_resource path="res://example/shooter_man/cursor_follower.tscn" type="PackedScene" id=3]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
 
 [node name="ShooterMan" parent="." instance=ExtResource( 1 )]
 position = Vector2( 448, 320 )
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Control" parent="CanvasLayer" instance=ExtResource( 2 )]
-visible = false
 
 [node name="CursorFollower" parent="." instance=ExtResource( 3 )]

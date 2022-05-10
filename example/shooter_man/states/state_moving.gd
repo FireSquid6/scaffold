@@ -17,11 +17,7 @@ func _enter(_args := []):
 
 	# get velocity
 	velocity = dir * move_spd
-
-	print(move_point)
-	print(machine.parent.position)
-	print(velocity)
-
+	
 
 func _game_logic() -> void:
 	var delta = get_physics_process_delta_time()

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/prototyper/weapon_factory/weapon_factory.gd" type="Script" id=1]
+
+[node name="Factory" type="Node"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Container" type="Node" parent="."]
+__meta__ = {
+"_editor_description_": "DO NOT RENAME ME"
+}

@@ -4,7 +4,7 @@ class_name ShooterEnemy
 
 export var move_spd = 400 # move spd in pixels/second
 var move_dir
-var target
+var target: Area2D
 export var mag_size = 12
 export var weapon_cooldown = 0.1
 
@@ -16,6 +16,7 @@ onready var weapon_timer: Timer = get_node("WeaponCooldown")
 
 func _ready():
 	weapon_timer.wait_time = weapon_cooldown
+	target = get_parent().get_node("CursorFollower")
 
 func _physics_process(_delta):
 	# update states
