@@ -1,17 +1,15 @@
+tool
 extends Node2D
 class_name Circle2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+export(float) var radius = 10.0
+export(Color) var color = Color(1, 1, 1, 1)
+var canvas_item: CanvasItem = CanvasItem.new()
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _process(delta):
+	property_list_changed_notify()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _draw():
+	draw_circle(position, radius, color)

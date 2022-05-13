@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9e2KmzDbHu21PQtK+B+X7CuweE59+1xQW64Lki7xovWTyalB2ysMKZxpZB+0mVSQia5wD05MjqtrlkmRUpr/Yg==",
+  "dgSpecHash": "0Y+wrkfXOQhK7Tr9j0gQp6cfjFhTBpJ+NtSfx4icB4b8+/WfwjH9S6lbaCNFYfyzSji6fSNpqD+1QtUmpefo0g==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\gd-prototype-engine\\Gd-prototype-engine.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\jdeis\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
-    "C:\\Users\\jdeis\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.2\\microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\Projects\\gd-prototype-engine\\Gd-prototype-engine.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
