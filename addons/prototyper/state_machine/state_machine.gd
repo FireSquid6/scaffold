@@ -4,8 +4,8 @@ extends Node
 class_name StateMachine
 
 
-var state_history = [] # the past x amount of states
-var possible_states = [] # a list of all the possible states (in string form)
+var state_history = [] # an array of strings containing the past few states. This list does not include the current state.
+var possible_states = [] # an array of strings containing the name of every possible state
 var selected_state: State # a refernce to whatever state is currently active
 export(NodePath) var starting_state = "" # a path to the starting state
 export(bool) var output_changes = false # whether state changes should be outputted to the debug console
@@ -33,13 +33,19 @@ func _ready():
 # changes the state to new_state. The enter_args array will be passed into the new state's _enter() function, while the exit_args array will be passed into the old state's _exit() function
 # This function returns a boolean indicating if the state change was successful
 # note: state history is updated before the new state's enter function is called but after the current state's exit function is called.
+# note: the old state's exit function is run before the new state's enter function 
+# new_state - the state that should be entered into
+# enter_args - any agruments that should be passed into the new state's _enter() method
+# exit_args - any arguments that should be passed intot he old state's _exit() method
 func change_state(new_state: String, enter_args := [], exit_args := []) -> bool:
 	var old_name = "none"
 	var new_name = "none"
 
-	# have the old state exit
-	if (new_state in possible_states):
+	# check if the new state can be entered into
+	if (get_state(new_state)._can_change()):
+		# make sure there was an old state
 		if selected_state != null:
+			# have the old state exit
 			# run exit function
 			selected_state._exit(exit_args)
 			
@@ -89,8 +95,10 @@ func _get_configuration_warning():
 
 
 # gets a reference to a state
-func get_state(state_name):
-	return get_node(state_name)
+# state_name - the name of the state as a string
+func get_state(state_name: String) -> State:
+	var state: State = get_node(state_name)
+	return state
 
 
 func _input(event):

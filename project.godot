@@ -38,6 +38,11 @@ _global_script_classes=[ {
 "class": "Weapon",
 "language": "GDScript",
 "path": "res://addons/prototyper/weapon_factory/weapon.gd"
+}, {
+"base": "Node",
+"class": "WeaponFactory",
+"language": "GDScript",
+"path": "res://addons/prototyper/weapon_factory/weapon_factory.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
@@ -45,7 +50,8 @@ _global_script_class_icons={
 "ShooterEnemy": "",
 "State": "",
 "StateMachine": "",
-"Weapon": ""
+"Weapon": "",
+"WeaponFactory": ""
 }
 
 [application]
