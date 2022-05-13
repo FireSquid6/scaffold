@@ -3,13 +3,14 @@ At a technical level, games are a series of interlocking systems. GD 2D Prototyp
 
 # Roadmap
 **v1.0.0**  
-- [ ] Prototype shape nodes  
+- [x] Prototype circle node  
 - [ ] Platform Controller 2D  
 - [ ] Top Down Controller 2D  
-- [ ] State Machine  
+- [x] State Machine
+- [ ] Documentation  
 
 **v1.1.0**  
-- [ ] Weapon system framework  
+- [ ] Weapon system framework   
 - [ ] Grid Controller 2D  
 - [ ] Options Menu Framework  
 
