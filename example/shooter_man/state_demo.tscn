@@ -9,3 +9,5 @@
 position = Vector2( 448, 320 )
 
 [node name="CursorFollower" parent="." instance=ExtResource( 3 )]
+
+[node name="Timer" type="Timer" parent="."]

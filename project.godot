@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "PlatformController2D",
 "language": "GDScript",
-"path": "res://addons/prototyper/controllers/platform_controller.gd"
+"path": "res://addons/prototyper/controllers/platform_controller/platform_controller.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "ShooterEnemy",
