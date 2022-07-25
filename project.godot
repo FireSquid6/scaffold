@@ -49,6 +49,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/prototyper/state_machine/state_machine.gd"
 }, {
+"base": "KinematicBody2D",
+"class": "TopDownController",
+"language": "GDScript",
+"path": "res://addons/prototyper/controllers/top_down_controller/top_down_controller.gd"
+}, {
+"base": "State",
+"class": "TopDownState",
+"language": "GDScript",
+"path": "res://addons/prototyper/controllers/top_down_controller/top_down_state.gd"
+}, {
 "base": "Node2D",
 "class": "Weapon",
 "language": "GDScript",
@@ -68,6 +78,8 @@ _global_script_class_icons={
 "ShooterEnemy": "",
 "State": "",
 "StateMachine": "",
+"TopDownController": "",
+"TopDownState": "",
 "Weapon": "",
 "WeaponFactory": ""
 }

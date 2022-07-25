@@ -5,31 +5,41 @@ class_name ObjectSaver
 # does not encode properties or the object type
 # does not encode sub-objects
 
-# converts the object's properties into a dictionary and then saves them to a text file
-static func save_object(filepath: String, obj: Object) -> void:
+const dont_store = ["script", "Script Variables"]
+
+# converts the object's properties into a dictionary and then saves them to a text file. These can later be loaded onto an object from the same class using load_properties()
+static func save_properties(filepath: String, obj: Object) -> void:
+	# open the file
 	var file = File.new()
-	
-	# store each property as a json string
-	# some sort of match statement followed by getting the property's value will be neccessary here
-	# also check out the to_json() function? not sure if it'll help for Vector2's and such
 	file.open(filepath, File.WRITE)
-	var dict = {}
+	
+	# store all the properties in a dictionary
+	var dict := {}
+	
 	for property in obj.get_property_list():
-		var json = property.to_json()
-		file.store_pascal_string(json)
+		var key = property["name"]
+		if !(key in dont_store):
+			var value = obj.get(key)
+			dict[key] = value
+	
+	# convert and store to josn
+	var json = JSON.print(dict)
+	file.store_pascal_string(json)
+	
+	# close the file
 	file.close()
 
 
-# loads the object
-static func load_object(filepath: String, obj: Object) -> Object:
+# loads the object's properties saved using save_properties onto a new object. This object must be from the same class as the saved object originally was, or it will not work.
+static func load_properties(filepath: String, obj: Object) -> void:
+	# open the file
 	var file: File = File.new()
 	file.open(filepath, File.READ)
 	
-	# iterate through the file
-	while file.get_position() < file.get_len():
-		var json = file.get_pascal_string()
-		var property = JSON.parse(json).result
-		
-		obj.set(property["name"], property["value"])
-		
-	return null
+	# iterate through the dictionary
+	var dict: Dictionary = JSON.parse(file.get_pascal_string()).result
+	for key in dict.keys():
+		obj.set(key, dict[key])
+	
+	# close the file
+	file.close()
