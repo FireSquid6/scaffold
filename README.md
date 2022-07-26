@@ -3,7 +3,7 @@ At a technical level, games are a series of interlocking systems. GD 2D Prototyp
 
 # Roadmap
 **v1.0.0**  
-- [x] Prototype circle node  
+- [x] Prototype shape images  
 - [x] State Machine  
 - [x] Object Freezer
 - [ ] Documentation  
