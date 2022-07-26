@@ -14,15 +14,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://example/state_machine/bullet.gd"
 }, {
-"base": "Node2D",
-"class": "Circle2D",
-"language": "GDScript",
-"path": "res://addons/prototyper/shapes/circle2d.gd"
-}, {
 "base": "Object",
 "class": "ObjectSaver",
 "language": "GDScript",
-"path": "res://addons/prototyper/object_saver/object_saver.gd"
+"path": "res://addons/prototyper/object_freezer.gd"
 }, {
 "base": "Object",
 "class": "SaveData",
@@ -46,7 +41,6 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Bullet": "",
-"Circle2D": "",
 "ObjectSaver": "",
 "SaveData": "",
 "ShooterEnemy": "",
