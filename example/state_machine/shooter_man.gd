@@ -10,7 +10,7 @@ export var weapon_cooldown = 0.1
 
 onready var state_machine: StateMachine = get_node("StateMachine")
 onready var bullet_container: Node = get_node("BulletContainer")
-onready var bullet: PackedScene = preload("res://example/shooter_enemy/bullet.tscn")
+onready var bullet: PackedScene = preload("res://example/state_machine/bullet.tscn")
 onready var weapon_timer: Timer = get_node("WeaponCooldown")
 
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://example/shooter_enemy/shooter_man.tscn" type="PackedScene" id=1]
-[ext_resource path="res://example/shooter_enemy/cursor_follower.tscn" type="PackedScene" id=3]
+[ext_resource path="res://example/state_machine/shooter_man.tscn" type="PackedScene" id=1]
+[ext_resource path="res://example/state_machine/cursor_follower.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="Node2D"]
 
