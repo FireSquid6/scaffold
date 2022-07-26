@@ -6,6 +6,6 @@ export(String) var id = "NewWeapon"
 
 
 func _attack():
-    pass
+	pass
 
 
