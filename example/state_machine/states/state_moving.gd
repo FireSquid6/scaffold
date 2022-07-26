@@ -19,9 +19,10 @@ func _enter(_args := []):
 	velocity = dir * move_spd
 	
 
-func _game_logic() -> void:
-	var delta = get_physics_process_delta_time()
+func _game_logic(delta) -> void:
+	# move towards the designated mvoe point
 	if machine.parent.position.distance_to(move_point) <= (velocity * delta).length():
+		# snap if neccessary
 		machine.parent.position = move_point
 		machine.change_state("Shooting")
 	else:

@@ -30,8 +30,7 @@ func _ready():
 	change_state(starting_state)
 
 
-# changes the state to new_state. The enter_args array will be passed into the new state's _enter() function, while the exit_args array will be passed into the old state's _exit() function
-# This function returns a boolean indicating if the state change was successful
+# changes the state to new_state. The enter_args array will be passed into the new state's _enter() function, while the exit_args array will be passed into the old state's _exit() function. This function returns a boolean indicating if the state change was successful
 # note: state history is updated before the new state's enter function is called but after the current state's exit function is called.
 # note: the old state's exit function is run before the new state's enter function 
 # new_state - the state that should be entered into
@@ -80,18 +79,11 @@ func change_state(new_state: String, enter_args := [], exit_args := []) -> bool:
 
 # tells the state machine to process all of the states
 # runs the state's game_logic and then runs its transfer_logic
-func process_states():
-	selected_state._game_logic()
+func process_states(delta):
+	selected_state._game_logic(delta)
 	emit_signal("game_logic_finished")
 	selected_state._transition_logic(possible_states)
 	emit_signal("transfer_logic_finished")
-
-
-func _get_configuration_warning():
-	if starting_state == "":
-		return "StateMachine requires a starting state to be set to work properly"
-	
-	return ""
 
 
 # gets a reference to a state
@@ -101,6 +93,7 @@ func get_state(state_name: String) -> State:
 	return state
 
 
+# run the state's active input event
 func _input(event):
 	if selected_state != null:
 		selected_state._active_input(event)

@@ -18,9 +18,9 @@ func _ready():
 	weapon_timer.wait_time = weapon_cooldown
 	target = get_parent().get_node("CursorFollower")
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	# update states
-	state_machine.process_states()
+	state_machine.process_states(delta)
 
 	# update label
 	$Label.text = state_machine.selected_state.name

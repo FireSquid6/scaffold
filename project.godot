@@ -43,16 +43,6 @@ _global_script_classes=[ {
 "class": "StateMachine",
 "language": "GDScript",
 "path": "res://addons/prototyper/state_machine/state_machine.gd"
-}, {
-"base": "Node2D",
-"class": "Weapon",
-"language": "GDScript",
-"path": "res://addons/prototyper/weapon_factory/weapon.gd"
-}, {
-"base": "Node",
-"class": "WeaponFactory",
-"language": "GDScript",
-"path": "res://addons/prototyper/weapon_factory/weapon_factory.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
@@ -61,9 +51,7 @@ _global_script_class_icons={
 "SaveData": "",
 "ShooterEnemy": "",
 "State": "",
-"StateMachine": "",
-"Weapon": "",
-"WeaponFactory": ""
+"StateMachine": ""
 }
 
 [application]

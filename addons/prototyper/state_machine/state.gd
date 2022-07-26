@@ -15,20 +15,17 @@ func _exit(args := []) -> void:
 	pass
 
 
-# execute game logic here
-func _game_logic() -> void:
+# virtaul method for running game logic. Delta is whatever value is passed to the state machine when process_states() is called.
+func _game_logic(delta) -> void:
 	pass
 
 
 # virtual method for running transition logic
-# this in
 func _transition_logic(existing_states: Array):
 	pass
 
 
-# a virtual method that can be overriden to add parameters to make sure a state can be moved into first
-# the method is run by the state_machine during the change_state method. If it returns false, the state change is aborted
-# by default it always returns true
+# a virtual method that can be overriden to add parameters to make sure a state can be moved into first. The method is run by the state_machine during the change_state method. If it returns false, the state change is aborted. By default it always returns true
 func _can_change() -> bool:
 	return true
 
