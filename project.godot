@@ -12,22 +12,27 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Bullet",
 "language": "GDScript",
-"path": "res://example/shooter_man/bullet.gd"
+"path": "res://example/state_machine/bullet.gd"
 }, {
 "base": "Node2D",
 "class": "Circle2D",
 "language": "GDScript",
 "path": "res://addons/prototyper/shapes/circle2d.gd"
 }, {
-"base": "KinematicBody2D",
-"class": "PlatformController2D",
+"base": "Object",
+"class": "ObjectSaver",
 "language": "GDScript",
-"path": "res://addons/prototyper/controllers/platform_controller/platform_controller.gd"
+"path": "res://addons/prototyper/object_saver/object_saver.gd"
+}, {
+"base": "Object",
+"class": "SaveData",
+"language": "GDScript",
+"path": "res://example/save_data/save_obj.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "ShooterEnemy",
 "language": "GDScript",
-"path": "res://example/shooter_man/shooter_man.gd"
+"path": "res://example/state_machine/shooter_man.gd"
 }, {
 "base": "Node",
 "class": "State",
@@ -38,32 +43,21 @@ _global_script_classes=[ {
 "class": "StateMachine",
 "language": "GDScript",
 "path": "res://addons/prototyper/state_machine/state_machine.gd"
-}, {
-"base": "Node2D",
-"class": "Weapon",
-"language": "GDScript",
-"path": "res://addons/prototyper/weapon_factory/weapon.gd"
-}, {
-"base": "Node",
-"class": "WeaponFactory",
-"language": "GDScript",
-"path": "res://addons/prototyper/weapon_factory/weapon_factory.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
 "Circle2D": "",
-"PlatformController2D": "",
+"ObjectSaver": "",
+"SaveData": "",
 "ShooterEnemy": "",
 "State": "",
-"StateMachine": "",
-"Weapon": "",
-"WeaponFactory": ""
+"StateMachine": ""
 }
 
 [application]
 
 config/name="Gd-prototype-engine"
-run/main_scene="res://example/shooter_man/state_demo.tscn"
+run/main_scene="res://example/state_machine/state_demo.tscn"
 config/icon="res://icon.png"
 
 [editor_plugins]

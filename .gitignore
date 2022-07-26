@@ -1,5 +1,4 @@
-
 .mono/metadata/ide_messaging_meta.txt
-*.md5
 *.stex
+*.md5
 *.import
