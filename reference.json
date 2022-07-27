@@ -1,0 +1,1230 @@
+{
+  "name": "Gd-prototype-engine",
+  "description": "",
+  "version": "n/a",
+  "classes": [
+    {
+      "name": "data_saver.gd",
+      "path": "res://addons/prototyper/example/save_data/data_saver.gd",
+      "extends_class": [
+        "Control"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class data_saver.gd",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+        {
+          "name": "save_location",
+          "value": "user://data.save",
+          "data_type": "String",
+          "signature": "const save_location: String = \"user://data.save\"",
+          "description": ""
+        }
+      ],
+      "members": [
+
+      ],
+      "signals": [
+
+      ],
+      "methods": [
+        {
+          "name": "_ready",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _ready()",
+          "description": "",
+          "arguments": [
+
+          ]
+        }
+      ],
+      "static_functions": [
+
+      ]
+    },
+    {
+      "name": "SaveData",
+      "path": "res://addons/prototyper/example/save_data/save_obj.gd",
+      "extends_class": [
+        "Object"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class SaveData",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+
+      ],
+      "members": [
+        {
+          "name": "level",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var level",
+          "description": ""
+        },
+        {
+          "name": "score",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var score",
+          "description": ""
+        },
+        {
+          "name": "lives",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var lives",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var name",
+          "description": ""
+        },
+        {
+          "name": "position",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var position",
+          "description": ""
+        }
+      ],
+      "signals": [
+
+      ],
+      "methods": [
+        {
+          "name": "foo",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func foo()",
+          "description": "",
+          "arguments": [
+
+          ]
+        }
+      ],
+      "static_functions": [
+
+      ]
+    },
+    {
+      "name": "Bullet",
+      "path": "res://addons/prototyper/example/state_machine/bullet.gd",
+      "extends_class": [
+        "KinematicBody2D"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class Bullet",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+
+      ],
+      "members": [
+        {
+          "name": "direction",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var direction",
+          "description": ""
+        },
+        {
+          "name": "spd",
+          "data_type": "var",
+          "default_value": 800,
+          "setter": "",
+          "getter": "",
+          "export": true,
+          "signature": "export var spd = 800",
+          "description": ""
+        }
+      ],
+      "signals": [
+
+      ],
+      "methods": [
+        {
+          "name": "_physics_process",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _physics_process(_delta)",
+          "description": "",
+          "arguments": [
+            {
+              "name": "_delta",
+              "type": "var"
+            }
+          ]
+        }
+      ],
+      "static_functions": [
+
+      ]
+    },
+    {
+      "name": "cursor_follower.gd",
+      "path": "res://addons/prototyper/example/state_machine/cursor_follower.gd",
+      "extends_class": [
+        "Area2D"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class cursor_follower.gd",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+
+      ],
+      "members": [
+
+      ],
+      "signals": [
+
+      ],
+      "methods": [
+        {
+          "name": "_process",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _process(delta)",
+          "description": "",
+          "arguments": [
+            {
+              "name": "delta",
+              "type": "var"
+            }
+          ]
+        }
+      ],
+      "static_functions": [
+
+      ]
+    },
+    {
+      "name": "ShooterEnemy",
+      "path": "res://addons/prototyper/example/state_machine/shooter_man.gd",
+      "extends_class": [
+        "KinematicBody2D"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class ShooterEnemy",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+
+      ],
+      "members": [
+        {
+          "name": "move_spd",
+          "data_type": "var",
+          "default_value": 400,
+          "setter": "",
+          "getter": "",
+          "export": true,
+          "signature": "export var move_spd = 400",
+          "description": " move spd in pixels/second\n"
+        },
+        {
+          "name": "move_dir",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var move_dir",
+          "description": ""
+        },
+        {
+          "name": "target",
+          "data_type": "Area2D",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var target: Area2D",
+          "description": ""
+        },
+        {
+          "name": "mag_size",
+          "data_type": "var",
+          "default_value": 12,
+          "setter": "",
+          "getter": "",
+          "export": true,
+          "signature": "export var mag_size = 12",
+          "description": ""
+        },
+        {
+          "name": "weapon_cooldown",
+          "data_type": "var",
+          "default_value": 0.1,
+          "setter": "",
+          "getter": "",
+          "export": true,
+          "signature": "export var weapon_cooldown = 0.1",
+          "description": ""
+        },
+        {
+          "name": "state_machine",
+          "data_type": "StateMachine",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var state_machine: StateMachine",
+          "description": ""
+        },
+        {
+          "name": "bullet_container",
+          "data_type": "Node",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var bullet_container: Node",
+          "description": ""
+        },
+        {
+          "name": "bullet",
+          "data_type": "PackedScene",
+          "default_value": "[PackedScene:19268]",
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var bullet: PackedScene = \"[PackedScene:19268]\"",
+          "description": ""
+        },
+        {
+          "name": "weapon_timer",
+          "data_type": "Timer",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var weapon_timer: Timer",
+          "description": ""
+        }
+      ],
+      "signals": [
+
+      ],
+      "methods": [
+        {
+          "name": "_ready",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _ready()",
+          "description": "",
+          "arguments": [
+
+          ]
+        },
+        {
+          "name": "_physics_process",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _physics_process(delta)",
+          "description": "",
+          "arguments": [
+            {
+              "name": "delta",
+              "type": "var"
+            }
+          ]
+        },
+        {
+          "name": "shoot",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func shoot()",
+          "description": "",
+          "arguments": [
+
+          ]
+        }
+      ],
+      "static_functions": [
+
+      ]
+    },
+    {
+      "name": "state_idle.gd",
+      "path": "res://addons/prototyper/example/state_machine/states/state_idle.gd",
+      "extends_class": [
+        "State"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class state_idle.gd",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+
+      ],
+      "members": [
+
+      ],
+      "signals": [
+
+      ],
+      "methods": [
+        {
+          "name": "_on_DetectionArea_body_entered",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _on_DetectionArea_body_entered(body: Node)",
+          "description": "",
+          "arguments": [
+            {
+              "name": "body",
+              "type": "Node"
+            }
+          ]
+        }
+      ],
+      "static_functions": [
+
+      ]
+    },
+    {
+      "name": "state_moving.gd",
+      "path": "res://addons/prototyper/example/state_machine/states/state_moving.gd",
+      "extends_class": [
+        "State"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class state_moving.gd",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+
+      ],
+      "members": [
+        {
+          "name": "move_point",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var move_point",
+          "description": ""
+        },
+        {
+          "name": "velocity",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var velocity",
+          "description": ""
+        },
+        {
+          "name": "move_spd",
+          "data_type": "var",
+          "default_value": 100,
+          "setter": "",
+          "getter": "",
+          "export": true,
+          "signature": "export var move_spd = 100",
+          "description": ""
+        },
+        {
+          "name": "max_move_dist",
+          "data_type": "var",
+          "default_value": 256,
+          "setter": "",
+          "getter": "",
+          "export": true,
+          "signature": "export var max_move_dist = 256",
+          "description": ""
+        },
+        {
+          "name": "min_move_dist",
+          "data_type": "var",
+          "default_value": 128,
+          "setter": "",
+          "getter": "",
+          "export": true,
+          "signature": "export var min_move_dist = 128",
+          "description": ""
+        }
+      ],
+      "signals": [
+
+      ],
+      "methods": [
+        {
+          "name": "_enter",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _enter(_args: Array)",
+          "description": "",
+          "arguments": [
+            {
+              "name": "_args",
+              "type": "Array"
+            }
+          ]
+        },
+        {
+          "name": "_game_logic",
+          "return_type": "null",
+          "rpc_mode": 0,
+          "signature": "func _game_logic(delta) -> null",
+          "description": "",
+          "arguments": [
+            {
+              "name": "delta",
+              "type": "var"
+            }
+          ]
+        }
+      ],
+      "static_functions": [
+
+      ]
+    },
+    {
+      "name": "state_shooting.gd",
+      "path": "res://addons/prototyper/example/state_machine/states/state_shooting.gd",
+      "extends_class": [
+        "State"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class state_shooting.gd",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+
+      ],
+      "members": [
+        {
+          "name": "in_mag",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var in_mag",
+          "description": ""
+        }
+      ],
+      "signals": [
+
+      ],
+      "methods": [
+        {
+          "name": "_enter",
+          "return_type": "null",
+          "rpc_mode": 0,
+          "signature": "func _enter(_args: Array) -> null",
+          "description": "",
+          "arguments": [
+            {
+              "name": "_args",
+              "type": "Array"
+            }
+          ]
+        },
+        {
+          "name": "_on_WeaponCooldown_timeout",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _on_WeaponCooldown_timeout()",
+          "description": "",
+          "arguments": [
+
+          ]
+        },
+        {
+          "name": "_transition_logic",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _transition_logic(_existing_states: Array)",
+          "description": "",
+          "arguments": [
+            {
+              "name": "_existing_states",
+              "type": "Array"
+            }
+          ]
+        },
+        {
+          "name": "_on_DetectionArea_body_exited",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _on_DetectionArea_body_exited(_body: Node)",
+          "description": "",
+          "arguments": [
+            {
+              "name": "_body",
+              "type": "Node"
+            }
+          ]
+        }
+      ],
+      "static_functions": [
+
+      ]
+    },
+    {
+      "name": "ObjectSaver",
+      "path": "res://addons/prototyper/object_freezer.gd",
+      "extends_class": [
+        "Object"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class ObjectSaver",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+        {
+          "name": "dont_store",
+          "value": [
+            "script",
+            "Script Variables"
+          ],
+          "data_type": "Array",
+          "signature": "const dont_store: Array = [\"script\",\"Script Variables\"]",
+          "description": " encodes the properties of any object to be loaded later\r\n does not encode properties or the object type\r\n does not encode sub-objects\r\n"
+        }
+      ],
+      "members": [
+
+      ],
+      "signals": [
+
+      ],
+      "methods": [
+
+      ],
+      "static_functions": [
+        {
+          "name": "save_properties",
+          "return_type": "null",
+          "rpc_mode": 0,
+          "signature": "func save_properties(filepath: String, obj: Object) -> null",
+          "description": " converts the object's properties into a dictionary and then saves them to a text file. These can later be loaded onto an object from the same class using load_properties()\r\n",
+          "arguments": [
+            {
+              "name": "filepath",
+              "type": "String"
+            },
+            {
+              "name": "obj",
+              "type": "Object"
+            }
+          ]
+        },
+        {
+          "name": "load_properties",
+          "return_type": "null",
+          "rpc_mode": 0,
+          "signature": "func load_properties(filepath: String, obj: Object) -> null",
+          "description": " loads the object's properties saved using save_properties onto a new object. This object must be from the same class as the saved object originally was, or it will not work.\r\n",
+          "arguments": [
+            {
+              "name": "filepath",
+              "type": "String"
+            },
+            {
+              "name": "obj",
+              "type": "Object"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "plugin.gd",
+      "path": "res://addons/prototyper/plugin.gd",
+      "extends_class": [
+        "EditorPlugin"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class plugin.gd",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+
+      ],
+      "members": [
+
+      ],
+      "signals": [
+
+      ],
+      "methods": [
+        {
+          "name": "_enter_tree",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _enter_tree()",
+          "description": "",
+          "arguments": [
+
+          ]
+        },
+        {
+          "name": "_exit_tree",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _exit_tree()",
+          "description": "",
+          "arguments": [
+
+          ]
+        }
+      ],
+      "static_functions": [
+
+      ]
+    },
+    {
+      "name": "State",
+      "path": "res://addons/prototyper/state_machine/state.gd",
+      "extends_class": [
+        "Node"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class State",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+
+      ],
+      "members": [
+        {
+          "name": "machine",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var machine",
+          "description": " the parent state machine manager\n"
+        }
+      ],
+      "signals": [
+
+      ],
+      "methods": [
+        {
+          "name": "_enter",
+          "return_type": "null",
+          "rpc_mode": 0,
+          "signature": "func _enter(args: Array) -> null",
+          "description": " runs whenever this state is entered\r\n",
+          "arguments": [
+            {
+              "name": "args",
+              "type": "Array"
+            }
+          ]
+        },
+        {
+          "name": "_exit",
+          "return_type": "null",
+          "rpc_mode": 0,
+          "signature": "func _exit(args: Array) -> null",
+          "description": " runs whenever this state is exited\r\n",
+          "arguments": [
+            {
+              "name": "args",
+              "type": "Array"
+            }
+          ]
+        },
+        {
+          "name": "_game_logic",
+          "return_type": "null",
+          "rpc_mode": 0,
+          "signature": "func _game_logic(delta) -> null",
+          "description": " virtaul method for running game logic. Delta is whatever value is passed to the state machine when process_states() is called.\r\n",
+          "arguments": [
+            {
+              "name": "delta",
+              "type": "var"
+            }
+          ]
+        },
+        {
+          "name": "_transition_logic",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _transition_logic(existing_states: Array)",
+          "description": " virtual method for running transition logic\r\n",
+          "arguments": [
+            {
+              "name": "existing_states",
+              "type": "Array"
+            }
+          ]
+        },
+        {
+          "name": "_can_change",
+          "return_type": "bool",
+          "rpc_mode": 0,
+          "signature": "func _can_change() -> bool",
+          "description": " a virtual method that can be overriden to add parameters to make sure a state can be moved into first. The method is run by the state_machine during the change_state method. If it returns false, the state change is aborted. By default it always returns true\r\n",
+          "arguments": [
+
+          ]
+        },
+        {
+          "name": "_active_input",
+          "return_type": "null",
+          "rpc_mode": 0,
+          "signature": "func _active_input(event: InputEvent) -> null",
+          "description": " same as _input(), but only called when active\r\n",
+          "arguments": [
+            {
+              "name": "event",
+              "type": "InputEvent"
+            }
+          ]
+        }
+      ],
+      "static_functions": [
+
+      ]
+    },
+    {
+      "name": "StateMachine",
+      "path": "res://addons/prototyper/state_machine/state_machine.gd",
+      "extends_class": [
+        "Node"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class StateMachine",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+
+      ],
+      "members": [
+        {
+          "name": "state_history",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var state_history",
+          "description": " an array of strings containing the past few states. This list does not include the current state.\n"
+        },
+        {
+          "name": "possible_states",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var possible_states",
+          "description": " an array of strings containing the name of every possible state\n"
+        },
+        {
+          "name": "selected_state",
+          "data_type": "State",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var selected_state: State",
+          "description": " a refernce to whatever state is currently active\n"
+        },
+        {
+          "name": "starting_state",
+          "data_type": "var",
+          "default_value": "",
+          "setter": "",
+          "getter": "",
+          "export": true,
+          "signature": "export var starting_state = \"\"",
+          "description": " a path to the starting state\n"
+        },
+        {
+          "name": "output_changes",
+          "data_type": "var",
+          "default_value": false,
+          "setter": "",
+          "getter": "",
+          "export": true,
+          "signature": "export var output_changes = false",
+          "description": " whether state changes should be outputted to the debug console\n"
+        },
+        {
+          "name": "max_state_history_length",
+          "data_type": "var",
+          "default_value": 20,
+          "setter": "",
+          "getter": "",
+          "export": true,
+          "signature": "export var max_state_history_length = 20",
+          "description": " the maximum length the state_history can be\n"
+        },
+        {
+          "name": "parent",
+          "data_type": "var",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var parent",
+          "description": " a reference to the state machine's parent\n"
+        }
+      ],
+      "signals": [
+        {
+          "name": "state_changed",
+          "arguments": [
+            "old_state",
+            "new_state"
+          ],
+          "signature": "signal state_changed(old_state, new_state)",
+          "description": " emitted whenever a state is changed\n"
+        },
+        {
+          "name": "game_logic_finished",
+          "arguments": [
+
+          ],
+          "signature": "signal game_logic_finished()",
+          "description": " emitted whenever the state finishes running its game_logic function\n"
+        },
+        {
+          "name": "transfer_logic_finished",
+          "arguments": [
+
+          ],
+          "signature": "signal transfer_logic_finished()",
+          "description": " emitted whenever state finishes running its transfer logic\n"
+        }
+      ],
+      "methods": [
+        {
+          "name": "_ready",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _ready()",
+          "description": "",
+          "arguments": [
+
+          ]
+        },
+        {
+          "name": "change_state",
+          "return_type": "bool",
+          "rpc_mode": 0,
+          "signature": "func change_state(new_state: String, enter_args: Array, exit_args: Array) -> bool",
+          "description": " changes the state to new_state. The enter_args array will be passed into the new state's _enter() function, while the exit_args array will be passed into the old state's _exit() function. This function returns a boolean indicating if the state change was successful\r\n note: state history is updated before the new state's enter function is called but after the current state's exit function is called.\r\n note: the old state's exit function is run before the new state's enter function \r\n new_state - the state that should be entered into\r\n enter_args - any agruments that should be passed into the new state's _enter() method\r\n exit_args - any arguments that should be passed intot he old state's _exit() method\r\n",
+          "arguments": [
+            {
+              "name": "new_state",
+              "type": "String"
+            },
+            {
+              "name": "enter_args",
+              "type": "Array"
+            },
+            {
+              "name": "exit_args",
+              "type": "Array"
+            }
+          ]
+        },
+        {
+          "name": "process_states",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func process_states(delta)",
+          "description": " tells the state machine to process all of the states\r\n runs the state's game_logic and then runs its transfer_logic\r\n",
+          "arguments": [
+            {
+              "name": "delta",
+              "type": "var"
+            }
+          ]
+        },
+        {
+          "name": "get_state",
+          "return_type": "State",
+          "rpc_mode": 0,
+          "signature": "func get_state(state_name: String) -> State",
+          "description": " gets a reference to a state\r\n state_name - the name of the state as a string\r\n",
+          "arguments": [
+            {
+              "name": "state_name",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "_input",
+          "return_type": "var",
+          "rpc_mode": 0,
+          "signature": "func _input(event)",
+          "description": " run the state's active input event\r\n",
+          "arguments": [
+            {
+              "name": "event",
+              "type": "var"
+            }
+          ]
+        }
+      ],
+      "static_functions": [
+
+      ]
+    },
+    {
+      "name": "Collector.gd",
+      "path": "res://Collector.gd",
+      "extends_class": [
+        "SceneTree"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class Collector.gd",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+
+      ],
+      "members": [
+
+      ],
+      "signals": [
+
+      ],
+      "methods": [
+        {
+          "name": "find_files",
+          "return_type": "PoolStringArray",
+          "rpc_mode": 0,
+          "signature": "func find_files(dirpath: String = \"\", patterns: PoolStringArray = [], is_recursive: bool = false, do_skip_hidden: bool = true) -> PoolStringArray",
+          "description": " Returns a list of file paths found in the directory.\n\n **Arguments**\n\n - dirpath: path to the directory from which to search files.\n - patterns: an array of string match patterns, where \"*\" matches zero or more\n   arbitrary characters and \"?\" matches any single character except a period\n   (\".\"). You can use it to find files by extensions. To find only GDScript\n   files, [\"*.gd\"]\n - is_recursive: if `true`, walks over subdirectories recursively, returning all\n   files in the tree.\n",
+          "arguments": [
+            {
+              "name": "dirpath",
+              "type": "String",
+              "default_value": ""
+            },
+            {
+              "name": "patterns",
+              "type": "PoolStringArray",
+              "default_value": [
+
+              ]
+            },
+            {
+              "name": "is_recursive",
+              "type": "bool",
+              "default_value": false
+            },
+            {
+              "name": "do_skip_hidden",
+              "type": "bool",
+              "default_value": true
+            }
+          ]
+        },
+        {
+          "name": "save_text",
+          "return_type": "null",
+          "rpc_mode": 0,
+          "signature": "func save_text(path: String = \"\", content: String = \"\") -> null",
+          "description": " Saves text to a file.\n",
+          "arguments": [
+            {
+              "name": "path",
+              "type": "String",
+              "default_value": ""
+            },
+            {
+              "name": "content",
+              "type": "String",
+              "default_value": ""
+            }
+          ]
+        },
+        {
+          "name": "get_reference",
+          "return_type": "Dictionary",
+          "rpc_mode": 0,
+          "signature": "func get_reference(files: PoolStringArray = [], refresh_cache: bool = false) -> Dictionary",
+          "description": " Parses a list of GDScript files and returns a list of dictionaries with the\n code reference data.\n\n If `refresh_cache` is true, will refresh Godot's cache and get fresh symbols.\n",
+          "arguments": [
+            {
+              "name": "files",
+              "type": "PoolStringArray",
+              "default_value": [
+
+              ]
+            },
+            {
+              "name": "refresh_cache",
+              "type": "bool",
+              "default_value": false
+            }
+          ]
+        },
+        {
+          "name": "print_pretty_json",
+          "return_type": "String",
+          "rpc_mode": 0,
+          "signature": "func print_pretty_json(reference: Dictionary) -> String",
+          "description": "",
+          "arguments": [
+            {
+              "name": "reference",
+              "type": "Dictionary"
+            }
+          ]
+        }
+      ],
+      "static_functions": [
+
+      ]
+    },
+    {
+      "name": "ReferenceCollectorCLI.gd",
+      "path": "res://ReferenceCollectorCLI.gd",
+      "extends_class": [
+        "SceneTree"
+      ],
+      "extends_file": "",
+      "icon": "",
+      "signature": "class ReferenceCollectorCLI.gd",
+      "description": "",
+      "sub_classes": [
+
+      ],
+      "constants": [
+
+      ],
+      "members": [
+        {
+          "name": "Collector",
+          "data_type": "SceneTree",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var Collector: SceneTree",
+          "description": ""
+        },
+        {
+          "name": "directories",
+          "data_type": "Array",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var directories: Array",
+          "description": " A list of directories to collect files from.\r\n"
+        },
+        {
+          "name": "is_recursive",
+          "data_type": "bool",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var is_recursive: bool",
+          "description": " A list of directories to collect files from.\r\n If true, explore each directory recursively\r\n"
+        },
+        {
+          "name": "patterns",
+          "data_type": "Array",
+          "default_value": null,
+          "setter": "",
+          "getter": "",
+          "export": false,
+          "signature": "var patterns: Array",
+          "description": " A list of directories to collect files from.\r\n If true, explore each directory recursively\r\n A list of patterns to filter files.\r\n"
+        }
+      ],
+      "signals": [
+
+      ],
+      "methods": [
+        {
+          "name": "_init",
+          "return_type": "null",
+          "rpc_mode": 0,
+          "signature": "func _init() -> null",
+          "description": "",
+          "arguments": [
+
+          ]
+        }
+      ],
+      "static_functions": [
+
+      ]
+    }
+  ]
+}
