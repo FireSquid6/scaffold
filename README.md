@@ -1,5 +1,5 @@
 # Prototyper
-At a technical level, games are a series of interlocking systems. GD 2D Prototyper is an addon for Godot that allows you to quickly prototype these systems while providing plenty of interfaces to allow your systems to adapt to the final product.
+At a technical level, games are a series of interlocking systems. Prototyper is an addon for Godot that allows you to quickly prototype these systems while providing plenty of interfaces to allow your systems to adapt to the final product.
 
 # Roadmap
 [Roadmap Project](https://github.com/users/FireSquid6/projects/2)
