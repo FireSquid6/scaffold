@@ -11,9 +11,9 @@ func _ready():
 	data.name = "Jonathan"
 	data.position = Vector2(1205, -1237)
 	
-	ObjectSaver.save_object(save_location, data)
+	ObjectFreezer.save_object(save_location, data)
 	
 	var new_data: SaveData = SaveData.new()
-	ObjectSaver.load_object(save_location, new_data)
+	ObjectFreezer.load_object(save_location, new_data)
 	print(new_data.name)
 	print(new_data.position)

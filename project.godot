@@ -15,7 +15,7 @@ _global_script_classes=[ {
 "path": "res://addons/prototyper/example/state_machine/bullet.gd"
 }, {
 "base": "Object",
-"class": "ObjectSaver",
+"class": "ObjectFreezer",
 "language": "GDScript",
 "path": "res://addons/prototyper/object_freezer.gd"
 }, {
@@ -41,7 +41,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Bullet": "",
-"ObjectSaver": "",
+"ObjectFreezer": "",
 "SaveData": "",
 "ShooterEnemy": "",
 "State": "",

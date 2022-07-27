@@ -1,5 +1,5 @@
 extends Object
-class_name ObjectSaver
+class_name ObjectFreezer
 
 # encodes the properties of any object to be loaded later
 # does not encode properties or the object type
