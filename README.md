@@ -18,7 +18,7 @@ At a technical level, games are a series of interlocking systems. GD 2D Prototyp
 If you have any suggestions or requests, feel free to add a github issue for them.
 
 # Documentation
-None for now
+Check the wiki tab to find documentation.
 
 # Installing
-Will either be an asset lib install or a direct install from github
+For now, you can either check the releases tab for the latest release, or download the files directly from main.
