@@ -50,7 +50,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Gd-prototype-engine"
+config/name="Scaffold"
+config/description="A scaffolding for you to build your game inside."
 run/main_scene="res://addons/prototyper/example/state_machine/state_demo.tscn"
 config/icon="res://icon.png"
 
