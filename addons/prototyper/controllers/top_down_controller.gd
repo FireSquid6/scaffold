@@ -15,11 +15,20 @@ export(String) var move_right = "ui_right"  # input for moving right
 export(float) var accspd = 18000  # how fast (in pixels / second) the controller accerates
 export(float) var max_spd = 1200  # the maximum speed (in pixels / second) the controller can travel at from just using accelerate_and_move()
 
+export(bool) var do_default_physics_process = true  # whether the default physics process (which moves the player) should be run or not
+
 
 # move every frame based on velocity
+# because godot is silly, this method will always run regardless of if it's overridden or not. You can turn this off by setting
+# do default physics process to false
+# this will execute after the current physics process frame
 func _physics_process(delta):
-	# move
-	velocity = move_and_slide(velocity)
+	if do_default_physics_process:
+		# wait until the next frame
+		yield(get_tree(), "physics_frame")
+		
+		# move
+		velocity = move_and_slide(velocity)
 
 
 # accelerates the character's velocity based on the inputs pressed, their acceleration speed, and their max speed
