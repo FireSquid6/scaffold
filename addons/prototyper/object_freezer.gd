@@ -7,6 +7,10 @@ class_name ObjectFreezer
 
 const dont_store = ["script", "Script Variables"]
 
+
+# note to future self: this needs to include some way to store the class name of the object.
+# may require a full rewrite.
+
 # converts the object's properties into a dictionary and then saves them to a text file. These can later be loaded onto an object from the same class using load_properties()
 static func save_properties(filepath: String, obj: Object) -> void:
 	# open the file
@@ -14,13 +18,7 @@ static func save_properties(filepath: String, obj: Object) -> void:
 	file.open(filepath, File.WRITE)
 	
 	# store all the properties in a dictionary
-	var dict := {}
-	
-	for property in obj.get_property_list():
-		var key = property["name"]
-		if !(key in dont_store):
-			var value = obj.get(key)
-			dict[key] = value
+	var dict := object_to_dictionary(obj)
 	
 	# convert and store to josn
 	var json = JSON.print(dict)
@@ -28,6 +26,29 @@ static func save_properties(filepath: String, obj: Object) -> void:
 	
 	# close the file
 	file.close()
+
+
+# recursively converts an object to a dictionary
+static func object_to_dictionary(obj: Object) -> Dictionary:
+	var dict := {}
+	
+	# iterate through each property in the object's property list
+	for property in obj.get_property_list():
+		var key = property["name"]
+		if !(key in dont_store):
+			# get the value of the ke
+			var value = obj.get(key)
+			
+			# check if the value is another object
+			if value as Object:
+				# call this function again
+				dict[key] = object_to_dictionary(value)
+			else:
+				# if it's a normal property
+				dict[key] = value
+	
+	# return the final dictionary
+	return dict
 
 
 # loads the object's properties saved using save_properties onto a new object. This object must be from the same class as the saved object originally was, or it will not work.
@@ -43,3 +64,16 @@ static func load_properties(filepath: String, obj: Object) -> void:
 	
 	# close the file
 	file.close()
+
+
+# converts a dictionary back to the original object. The base object must be created beforehand and passed as an argument
+static func dictionary_to_object(dict: Dictionary, base_object: Object) -> void:
+	for key in dict.keys():
+		var value = dict[key]
+		
+		# check if the value is another object
+		if value as Object:
+			pass
+		# otherwise, just load it as normal
+		else:
+			base_object.set(key, dict[key])
