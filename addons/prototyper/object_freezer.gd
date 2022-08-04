@@ -2,10 +2,10 @@ extends Object
 class_name ObjectFreezer
 
 # encodes the properties of any object to be loaded later
-# does not encode properties or the object type
-# does not encode sub-objects
+# does not encode properties types or the object type
+# does not encode sub-objects, only primitive types can be stored
 
-const dont_store = ["script", "Script Variables"]
+const dont_store = ["script", "Script Variables"]  # list property names not to store
 
 
 # note to future self: this needs to include some way to store the class name of the object.
@@ -28,7 +28,8 @@ static func save_properties(filepath: String, obj: Object) -> void:
 	file.close()
 
 
-# recursively converts an object to a dictionary
+# converts an object to a dictionary
+# the object must already be created
 static func object_to_dictionary(obj: Object) -> Dictionary:
 	var dict := {}
 	
@@ -36,7 +37,7 @@ static func object_to_dictionary(obj: Object) -> Dictionary:
 	for property in obj.get_property_list():
 		var key = property["name"]
 		if !(key in dont_store):
-			# get the value of the ke
+			# get the value of the key
 			var value = obj.get(key)
 			
 			# check if the value is another object
@@ -58,7 +59,7 @@ static func load_properties(filepath: String, obj: Object) -> void:
 	file.open(filepath, File.READ)
 	
 	# iterate through the dictionary
-	var dict: Dictionary = JSON.parse(file.get_pascal_string()).result
+	var dict: Dictionary = JSON.parse(file.get_pascal_string()).result4
 	for key in dict.keys():
 		obj.set(key, dict[key])
 	
@@ -67,6 +68,7 @@ static func load_properties(filepath: String, obj: Object) -> void:
 
 
 # converts a dictionary back to the original object. The base object must be created beforehand and passed as an argument
+# the object must already be created
 static func dictionary_to_object(dict: Dictionary, base_object: Object) -> void:
 	for key in dict.keys():
 		var value = dict[key]
