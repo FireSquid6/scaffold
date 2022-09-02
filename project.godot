@@ -12,32 +12,32 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Bullet",
 "language": "GDScript",
-"path": "res://addons/prototyper/example/state_machine/bullet.gd"
+"path": "res://addons/scaffold/example/state_machine/bullet.gd"
 }, {
 "base": "Object",
 "class": "ObjectFreezer",
 "language": "GDScript",
-"path": "res://addons/prototyper/object_freezer.gd"
+"path": "res://addons/scaffold/object_freezer.gd"
 }, {
 "base": "Object",
 "class": "SaveData",
 "language": "GDScript",
-"path": "res://addons/prototyper/example/save_data/save_obj.gd"
+"path": "res://addons/scaffold/example/save_data/save_obj.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "ShooterEnemy",
 "language": "GDScript",
-"path": "res://addons/prototyper/example/state_machine/shooter_man.gd"
+"path": "res://addons/scaffold/example/state_machine/shooter_man.gd"
 }, {
 "base": "Node",
 "class": "State",
 "language": "GDScript",
-"path": "res://addons/prototyper/state_machine/state.gd"
+"path": "res://addons/scaffold/state_machine/state.gd"
 }, {
 "base": "Node",
 "class": "StateMachine",
 "language": "GDScript",
-"path": "res://addons/prototyper/state_machine/state_machine.gd"
+"path": "res://addons/scaffold/state_machine/state_machine.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
@@ -52,7 +52,7 @@ _global_script_class_icons={
 
 config/name="Scaffold"
 config/description="A scaffolding for you to build your game inside."
-run/main_scene="res://addons/prototyper/example/state_machine/state_demo.tscn"
+run/main_scene="res://addons/scaffold/example/state_machine/state_demo.tscn"
 config/icon="res://icon.png"
 
 [editor_plugins]

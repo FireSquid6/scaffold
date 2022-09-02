@@ -2,7 +2,8 @@ extends Node
 class_name State
 
 
-onready var machine = get_parent() # the parent state machine manager
+onready var machine = get_parent() # the parent state machine 
+var active_signals = []
 
 
 # runs whenever this state is entered
@@ -32,4 +33,8 @@ func _can_change() -> bool:
 
 # same as _input(), but only called when active
 func _active_input(event: InputEvent) -> void:
+	pass
+
+
+func _add_active_signal(signaler: Object, signal_name: String, reciever: Object, reciever_method: String):
 	pass
