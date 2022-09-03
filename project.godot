@@ -12,51 +12,45 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Bullet",
 "language": "GDScript",
-"path": "res://addons/prototyper/example/state_machine/bullet.gd"
-}, {
-"base": "Object",
-"class": "ObjectFreezer",
-"language": "GDScript",
-"path": "res://addons/prototyper/object_freezer.gd"
+"path": "res://addons/scaffold/example/state_machine/bullet.gd"
 }, {
 "base": "Object",
 "class": "OtherData",
 "language": "GDScript",
-"path": "res://addons/prototyper/example/save_data/other_object.gd"
+"path": "res://addons/scaffold/example/save_data/other_object.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "PlatformController2D",
 "language": "GDScript",
-"path": "res://addons/prototyper/controllers/platform_controller.gd"
+"path": "res://addons/scaffold/controllers/platform_controller.gd"
 }, {
 "base": "Object",
 "class": "SaveData",
 "language": "GDScript",
-"path": "res://addons/prototyper/example/save_data/save_obj.gd"
+"path": "res://addons/scaffold/example/save_data/save_obj.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "ShooterEnemy",
 "language": "GDScript",
-"path": "res://addons/prototyper/example/state_machine/shooter_man.gd"
+"path": "res://addons/scaffold/example/state_machine/shooter_man.gd"
 }, {
 "base": "Node",
 "class": "State",
 "language": "GDScript",
-"path": "res://addons/prototyper/state_machine/state.gd"
+"path": "res://addons/scaffold/state_machine/state.gd"
 }, {
 "base": "Node",
 "class": "StateMachine",
 "language": "GDScript",
-"path": "res://addons/prototyper/state_machine/state_machine.gd"
+"path": "res://addons/scaffold/state_machine/state_machine.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "TopDownController",
 "language": "GDScript",
-"path": "res://addons/prototyper/controllers/top_down_controller.gd"
+"path": "res://addons/scaffold/controllers/top_down_controller.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
-"ObjectFreezer": "",
 "OtherData": "",
 "PlatformController2D": "",
 "SaveData": "",
@@ -75,7 +69,7 @@ config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/prototyper/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [physics]
 
